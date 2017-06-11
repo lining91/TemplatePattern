@@ -20,7 +20,7 @@ public:
 	virtual int Age() = 0;
 	virtual string Team() = 0;
 
-	//	通过该函数，来实现是否使用钩子，在子类决定是否使用钩子
+	//	通过该函数，在子类决定是否使用拥有队伍
 	virtual bool HaveTeam(){ return true; }
 };
 
@@ -44,6 +44,6 @@ class CPlayer_C : public CInfoTemplate
 {
 	string Name() { return "T-MAC"; }
 	int Age() { return 37; }
-	bool HaveTeam() { return false; }	//	使用钩子函数来标记，该运动员暂未有队伍
+	bool HaveTeam() { return false; }	//	该运动员暂未有队伍
 	string Team() { return ""; }
 };
